@@ -4,4 +4,8 @@ export class WorkingDirectory {
         public readonly cliFolder: string,
         public readonly repoRoot: string,
     ) {}
+
+    public isInsideRepo(targetPath: string): boolean {
+        return targetPath.startsWith(this.repoRoot);
+    }
 }

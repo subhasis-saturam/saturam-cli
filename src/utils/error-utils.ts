@@ -4,3 +4,7 @@ export function getErrorMessage(error: unknown): string {
     }
     return String(error);
 }
+
+export function isError(error: unknown): error is Error {
+    return error instanceof Error;
+}
