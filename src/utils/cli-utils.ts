@@ -39,3 +39,10 @@ export async function runCli(cwd: string, getContainer: () => Promise<ContainerI
         process.exit(1);
     }
 }
+
+export function truncateString(str: string, maxLength: number): string {
+    if (str.length <= maxLength) {
+        return str;
+    }
+    return `${str.slice(0, Math.max(0, maxLength - 3))}...`;
+}

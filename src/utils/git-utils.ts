@@ -37,3 +37,7 @@ export function parseDiffByFile(rawDiff: string): Record<string, string> {
 
     return chunks;
 }
+
+export function isDiffEmpty(rawDiff: string): boolean {
+    return !rawDiff || rawDiff.trim().length === 0;
+}
